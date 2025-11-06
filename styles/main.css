@@ -92,14 +92,13 @@ body {
     text-decoration-color: transparent !important;
 }
 .hero {
-    background: bottom center / cover url(../assets/army-medal-closeup-edited-widescreen.jpg);
+    background: bottom center / cover no-repeat url(../assets/army-medal-closeup-edited-widescreen.jpg);
     display: flex;
     position: relative;
     text-align: center;
     justify-content: center;
     align-items: center;
     min-height: 95vh;
-    margin-top: -128px;
     width: 100%;
     color: white;
 }
@@ -114,6 +113,20 @@ body {
 }
 .about {
     padding: var(--spacing-xl) 0;
+}
+.video > .bound {
+    width: 100%;
+    max-width: 1200px;
+    margin: var(--spacing-xl) auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(200px,56.25%,625px);
+}
+.video >.bound > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 footer {
     padding: 0 0 var(--spacing-xxl);
