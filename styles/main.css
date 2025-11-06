@@ -103,12 +103,12 @@ body {
     width: 100%;
     color: white;
 }
-.hero .grid-plate {
+.grid-plate {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem;
 }
-.grid-plate > img {
+.grid-plate > img, .grid-plate > iframe {
     grid-column: 1/13;
     width: 100%;
 }
