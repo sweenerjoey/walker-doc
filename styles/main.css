@@ -112,7 +112,8 @@ body {
     width: 100%;
 }
 img {
-	user-drag: none;
+	-webkit-user-select: none; /* Safari */
+	user-select: none;
 }
 .about {
     padding: var(--spacing-xl) 0;
