@@ -51,5 +51,5 @@ footer p {
     font-family: var(--font-sans);
     margin: 0 var(--spacing-l);
     color: var(--color-gray-200);
-    font-size: 0.75rem;
+    font-size: 11px;
 }
