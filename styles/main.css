@@ -111,6 +111,9 @@ body {
     grid-column: 1/13;
     width: 100%;
 }
+img {
+	user-drag: none;
+}
 .about {
     padding: var(--spacing-xl) 0;
 }
