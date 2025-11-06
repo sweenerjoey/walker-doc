@@ -114,6 +114,9 @@ body {
 img {
 	-webkit-user-select: none; /* Safari */
 	user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
 }
 .about {
     padding: var(--spacing-xl) 0;
