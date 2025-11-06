@@ -1,0 +1,60 @@
+:root {
+  --color-background: #01050e;
+}
+header {
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    transition: 0.3s;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    transition: all 0.3s;
+    z-index: 1;
+}
+header.scrolled {
+    background-color: var(--color-background);
+}
+nav {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 3vw;
+}
+.nav-logo {
+    grid-column: 1;
+    text-align: left;
+}
+.nav-logo > img {
+    max-width: 200px;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateY(-1rem);
+}
+header.scrolled .nav-logo > img {
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+.nav-links > li {
+    text-align: left;
+    padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+    nav {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    nav .nav-logo {
+        grid-column: 2;
+        text-align: center;
+    }
+}

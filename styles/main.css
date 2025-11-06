@@ -1,0 +1,144 @@
+:root {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Newsreader", Georgia, serif;
+    --color-primary: #073763;
+    --color-secondary: #9fc5e8;
+    --color-tertiary: #9A0000;
+    --color-white: #fff;
+    --color-gray-100: #f3f3f3;
+    --color-gray-200: #999;
+    --color-gray-300: #434343;
+    --color-gray-400: #1c1c1c;
+    --color-black: #01050e;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 2.25rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+    --button-spacing: var(--spacing-s) var(--spacing-m);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body {
+    background-color: var(--color-black);
+    color: var(--color-gray-100);
+    text-align: center;
+}
+.block {
+    transition: all 300ms;
+    color: var(--color-gray-100);
+    position: relative;
+    justify-content: center;
+}
+.bound {
+    width: 90%;
+    max-width: 90ch;
+    margin: 0 auto;
+    padding: var(--spacing-l) 0;
+}
+.prose p {
+    padding-bottom: var(--spacing-m);
+}
+.separator {
+    width: 200px;
+    margin: var(--spacing-l) 0;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    align-items: stretch;
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-xl);
+}
+.button-primary {
+    border-radius: 40px;
+    padding: var(--button-spacing);
+    border: 2px solid transparent;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.button-primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-black)
+}
+.button-secondary {
+    border-radius: 40px;
+    padding: var(--button-spacing);
+    border: 2px solid var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+.button-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+}
+.button-tertiary {
+    padding: var(--spacing-xs);
+    color: var(--color-white);
+    text-decoration: underline !important;
+    text-underline-offset: var(--spacing-xs);
+    text-decoration-thickness: 1px !important;
+    text-decoration-color: var(--color-secondary) !important;
+    transition: all 0.3s ease;
+}
+.button-tertiary:hover {
+    color: var(--color-secondary);
+    text-decoration-color: transparent !important;
+}
+.hero {
+    background: bottom center / cover url(../assets/army-medal-closeup-edited-widescreen.jpg);
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    margin-top: -128px;
+    width: 100%;
+    color: white;
+}
+.hero .grid-plate {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+.grid-plate > img {
+    grid-column: 1/13;
+    width: 100%;
+}
+.about {
+    padding: var(--spacing-xl) 0;
+}
+footer {
+    padding: 0 0 var(--spacing-xxl);
+}
+footer .endorsement {
+    padding: var(--spacing-xxl) 0;
+    width: clamp(200px,50vw,300px)
+}
+/*
+ *
+ *
+ *
+ *
+ *  MEDIA QUERIES
+ *
+ *
+ *
+ *
+ */
+
+@media (min-width: 768px) {
+    .grid-plate > img {
+        grid-column: 2/12;
+    }
+    .buttons {
+        flex-direction: row;
+    }
+}
