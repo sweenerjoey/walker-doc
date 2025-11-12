@@ -48,12 +48,16 @@ nav input[type="checkbox"]:not(:checked) + ul {
 .nav-logo {
     grid-column: 1;
     text-align: left;
+    pointer-events: none;
 }
 .nav-logo > img {
     max-width: 200px;
     opacity: 0;
     transition: all 0.3s;
     transform: translateY(-1rem);
+}
+header.scrolled .nav-logo {
+    pointer-events: all;
 }
 header.scrolled .nav-logo > img {
     opacity: 1;

@@ -1,0 +1,179 @@
+/* Created by Joey Sweener. https://jsweener.carrd.co. */
+
+:root { 
+    /* These root variables define the core elements of the design system, like spacing and grids. Editing these variables will cascade down into the theme, allowing for broad design system edits by manipulating these values. Please note that there are no core visual characteristics in this file; those are edited in "theme.css". */
+    --spacing-base-value: 1rem;
+    --spacing-xs: calc(var(--spacing-base-value) * 0.5);
+    --spacing-s: var(--spacing-base-value);
+    --spacing-m: calc(var(--spacing-base-value) * 1.5);
+    --spacing-l: calc(var(--spacing-base-value) * 2.25);
+    --spacing-xl: calc(var(--spacing-base-value) * 4);
+    --spacing-xxl: calc(var(--spacing-base-value) * 6);
+    --spacing-3xl: calc(var(--spacing-base-value) * 12);
+    --grid-column-count: 4; /* This default number reflects the number of columns on mobile. */
+    --grid-gap: var(--spacing-s);
+    --max-width: 90ch;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+.block {
+    transition: all 300ms;
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: var(--spacing-m) 0;
+}
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    align-items: stretch;
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-xl);
+}
+@media (min-width: 768px) {
+    .flex {
+        flex-direction: row;
+    }
+}
+.center {
+    text-align: center;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-column-count), minmax(0, 1fr));
+    gap: var(--grid-gap);
+    padding: var(--grid-gap) inherit;
+}
+.grid * {
+    grid-column-start: var(--grid-column-start);
+    grid-column-end: var(--grid-span);
+    place-content: center;
+    width: 100%;
+}
+.mobile-span-full, .mobile-span-all {
+    --grid-amount: var(--grid-column-count);
+    --grid-span: span var(--grid-amount);
+}
+.mobile-span-3 {
+    --grid-amount: span calc((var(--grid-column-count) / 4) * 3);
+    --grid-span: var(--grid-amount);
+}
+.mobile-span-half {
+    --grid-amount: span calc(var(--grid-column-count) / 2);
+    --grid-span: var(--grid-amount);
+}
+.mobile-span-quarter, .mobile-span-1 {
+    --grid-amount: span calc(var(--grid-column-count) / 4);
+    --grid-span: var(--grid-amount);
+}
+@media (min-width: 768px) {
+    :root {
+        --grid-column-count: 12;
+        --grid-gap: var(--spacing-m);
+    }
+    .span-1 {
+        --grid-column-start: unset;
+        --grid-amount: 1;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-2 {
+        --grid-column-start: unset;
+        --grid-amount: 2;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-quarter, .span-3 {
+        --grid-column-start: unset;
+        --grid-amount: calc(var(--grid-column-count) / 4);
+        --grid-span: span var(--grid-amount);
+    }
+    .span-one-third, .span-third, .span-4 {
+        --grid-column-start: unset;
+        --grid-amount: calc(var(--grid-column-count) / 3);
+        --grid-span: span var(--grid-amount);
+    }
+    .span-5 {
+        --grid-column-start: unset;
+        --grid-amount: 5;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-half, .span-6 {
+        --grid-column-start: unset;
+        --grid-amount: calc(var(--grid-column-count) / 2);
+        --grid-span: span var(--grid-amount);
+    }
+    .span-7 {
+        --grid-column-start: unset;
+        --grid-amount: 7;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-two-third, .span-two-thirds, .span-8 {
+        --grid-column-start: unset;
+        --grid-amount: calc((var(--grid-column-count) / 3) * 2);
+        --grid-span: span var(--grid-amount);
+    }
+    .span-9 {
+        --grid-column-start: unset;
+        --grid-amount: 9;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-10 {
+        --grid-column-start: unset;
+        --grid-amount: 10;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-11 {
+        --grid-column-start: unset;
+        --grid-amount: 11;
+        --grid-span: span var(--grid-amount);
+    }
+    .span-all, .span-full, .span-12 {
+        --grid-column-start: 1;
+        --grid-amount: var(--grid-column-count);
+        --grid-span: span var(--grid-amount);
+    }
+    .col-start-1 {
+        --grid-column-start: 1;
+    }
+    .col-start-2 {
+        --grid-column-start: 2;
+    }
+    .col-start-3 {
+        --grid-column-start: 3;
+    }
+    .col-start-4 {
+        --grid-column-start: 4;
+    }
+    .col-start-5 {
+        --grid-column-start: 5;
+    }
+    .col-start-6 {
+        --grid-column-start: 6;
+    }
+    .col-start-7, .col-start-half {
+        --grid-column-start: 7;
+    }
+    .col-start-8 {
+        --grid-column-start: 8;
+    }
+    .col-start-9 {
+        --grid-column-start: 9;
+    }
+    .col-start-10 {
+        --grid-column-start: 10;
+    }
+    .col-start-11 {
+        --grid-column-start: 11;
+    }
+}
