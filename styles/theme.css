@@ -163,7 +163,7 @@ footer {
     text-decoration-color: transparent !important;
 }
 .home /* Background and styling for a unique homepage hero area. This differs from the standard "header" class (below). */ {
-    background: fixed bottom center / cover no-repeat url(../assets/army-medal-shannon-rae-widescreen.jpg);
+    background: bottom center / cover no-repeat url(../assets/army-medal-shannon-rae-widescreen.jpg);
     display: flex;
     position: relative;
     text-align: center;
